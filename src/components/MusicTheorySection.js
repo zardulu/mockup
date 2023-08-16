@@ -62,7 +62,7 @@ const MusicTheorySection = () => {
       }}
     >
       {profileCardsData.map((profile) => (
-        <Card key={profile.id} sx={{ backgroundColor: '#f0ebeb', width: '330px', marginBottom: 5, borderRadius: '20px', boxShadow: 0, cursor:'pointer'}}>
+        <Card key={profile.id} sx={{ backgroundColor: '#f0ebeb', width: '330px', marginBottom: 3, borderRadius: '20px', boxShadow: 0, cursor:'pointer'}}>
           <CardMedia
             component="img"
             height="130"

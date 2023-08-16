@@ -31,7 +31,7 @@ const CategoriesSection = () => {
       }}
     >
       {categories.map((category) => (
-        <Card key={category.id} sx={{ width: 'calc(100% / 7)', marginBottom: 5, borderRadius: '30px', boxShadow: '0', cursor: 'pointer' }}>
+        <Card key={category.id} sx={{ width: 'calc(100% / 7)', marginBottom: 3, borderRadius: '30px', boxShadow: '0', cursor: 'pointer' }}>
           <CardContent sx={{ backgroundColor: '#f0ebeb', padding: '`10px', textAlign: 'center' }}>
             {category.icon}
             <Typography variant="body2" sx={{ marginTop: '5px' }}>
