@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { CssBaseline, Box, Typography, Button } from '@mui/material';
+import Navbar from './components/NavigationBar'; 
+import MusicTheorySection from './components/MusicTheorySection'; 
+import CategoriesSection from './components/CategoriesSection';
+import MyLearningSection from './components/MyLearningSection';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline /> 
+      <Box sx={{ display: 'flex'}}>
+        <Navbar />
+        <Box>
+          <MusicTheorySection />
+          <CategoriesSection />
+          <MyLearningSection />
+        </Box>
+      
+      </Box>
+    </>
   );
-}
+};
 
 export default App;
