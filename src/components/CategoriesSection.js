@@ -7,6 +7,8 @@ import EqualizerIcon from '@mui/icons-material/Equalizer';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import { CardActionArea } from '@mui/material';
+
 
 const CategoriesSection = () => {
   const categories = [
@@ -32,12 +34,14 @@ const CategoriesSection = () => {
     >
       {categories.map((category) => (
         <Card key={category.id} sx={{ width: 'calc(100% / 7)', marginBottom: 3, borderRadius: '30px', boxShadow: '0', cursor: 'pointer' }}>
+          <CardActionArea>
           <CardContent sx={{ backgroundColor: '#f0ebeb', padding: '`10px', textAlign: 'center' }}>
             {category.icon}
             <Typography variant="body2" sx={{ marginTop: '5px' }}>
               {category.name}
             </Typography>
           </CardContent>
+          </CardActionArea>
         </Card>
       ))}
     </Box>

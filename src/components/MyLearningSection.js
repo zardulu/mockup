@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, LinearProgress, Grid, Box } from '@mui/material';
+import { Card, CardContent, Typography, LinearProgress, Grid, Box, CardActionArea } from '@mui/material';
 
 const MyLearningSection = () => {
   const cardData = [
@@ -34,6 +34,7 @@ const MyLearningSection = () => {
     >
       {cardData.map((card) => (
         <Card key={card.id} sx={{backgroundColor: '#f0ebeb', width: '50%', marginBottom: '20px', borderRadius: '20px', boxShadow: 0, cursor: 'pointer' }}>
+          <CardActionArea>
           <CardContent>
             <Grid container spacing={3} alignItems="center">
               <Grid item sx={{marginTop: '-5px', marginBottom: '-20px'}}>
@@ -52,6 +53,7 @@ const MyLearningSection = () => {
               </Grid>
             </Grid>
           </CardContent>
+          </CardActionArea>
         </Card>
       ))}
     </Box>

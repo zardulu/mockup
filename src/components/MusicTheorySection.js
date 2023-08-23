@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Avatar, Typography, Box, Grid } from '@mui/material';
+import { Card, CardContent, CardMedia, Avatar, Typography, Box, Grid, CardActionArea } from '@mui/material';
 import TimerIcon from '@mui/icons-material/Timer';
 import StarIcon from '@mui/icons-material/Star';
 
@@ -63,6 +63,7 @@ const MusicTheorySection = () => {
     >
       {profileCardsData.map((profile) => (
         <Card key={profile.id} sx={{ backgroundColor: '#f0ebeb', width: '330px', marginBottom: 3, borderRadius: '20px', boxShadow: 0, cursor:'pointer'}}>
+          <CardActionArea>
           <CardMedia
             component="img"
             height="130"
@@ -118,6 +119,7 @@ const MusicTheorySection = () => {
     </Grid>
   </Grid>
 </CardContent>
+</CardActionArea>
 
         </Card>
       ))}
