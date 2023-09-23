@@ -22,41 +22,41 @@ const MyLearningSection = () => {
   return (
     <>
     <Typography variant='h4' marginLeft={5}>My Learning</Typography>
-    <Box
+    <Grid
+      container
+      spacing={2}
       sx={{
-        display: 'flex',
         paddingTop: '25px',
-        gap: '50px',
-        paddingLeft: '3%'
-        
-         // Adjust for the navigation bar width
+        paddingLeft: '3%',
+        paddingRight: '3%',
       }}
     >
       {cardData.map((card) => (
-        <Card key={card.id} sx={{backgroundColor: '#f0ebeb', width: '50%', marginBottom: '20px', borderRadius: '20px', boxShadow: 0, cursor: 'pointer' }}>
-          <CardActionArea>
-          <CardContent>
-            <Grid container spacing={3} alignItems="center">
-              <Grid item sx={{marginTop: '-5px', marginBottom: '-20px'}}>
-                <img
-                  src={card.imageSrc}
-                  alt="Card Image"
-                  style={{ width: '180px', height: '150px', borderRadius: '15px'}}
-                  
-                />
+        <Grid item xs={12} sm={6} md={6} lg= {6} key={card.id}>
+          <Card sx={{ backgroundColor: '#f0ebeb', marginBottom: '20px', borderRadius: '20px', boxShadow: 0, cursor: 'pointer' }}>
+            <CardActionArea>
+            <CardContent>
+              <Grid container spacing={2} alignItems="center">
+                <Grid item xs={4}>
+                  <img
+                    src={card.imageSrc}
+                    alt="Card Image"
+                    style={{ width: '100%', height: 'auto', borderRadius: '15px'}}
+                  />
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="h6">{card.heading}</Typography>
+                  <Typography variant="subtitle1">{card.subheading}</Typography>
+                  <LinearProgress variant='determinate' color='warning' value={card.progress} sx={{ marginTop: '20px' }} />
+                  <Typography variant="body1">{`${card.progress}% completed`}</Typography>
+                </Grid>
               </Grid>
-              <Grid item>
-                <Typography variant="h6">{card.heading}</Typography>
-                <Typography variant="subtitle1">{card.subheading}</Typography>
-                <LinearProgress variant='determinate' color='warning' value={card.progress} sx={{ marginTop: '20px', width: '300px' }} />
-                <Typography variant="body1">{`${card.progress}% completed`}</Typography>
-              </Grid>
-            </Grid>
-          </CardContent>
-          </CardActionArea>
-        </Card>
+            </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
       ))}
-    </Box>
+    </Grid>
     </>
   );
 };

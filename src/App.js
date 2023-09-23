@@ -1,5 +1,5 @@
 import React from 'react';
-import { CssBaseline, Box, Typography, Button } from '@mui/material';
+import { CssBaseline, Box, Grid, Typography, Button } from '@mui/material';
 import Navbar from './components/NavigationBar'; 
 import MusicTheorySection from './components/MusicTheorySection'; 
 import CategoriesSection from './components/CategoriesSection';
@@ -9,15 +9,17 @@ const App = () => {
   return (
     <>
       <CssBaseline /> 
-      <Box sx={{ display: 'flex'}}>
+      <Grid sx={{ display: 'flex'}}>
+        
         <Navbar />
-        <Box>
+        
+        <Grid sx = {{marginLeft: '10vw'}}>
           <MusicTheorySection />
           <CategoriesSection />
           <MyLearningSection />
-        </Box>
+        </Grid>
       
-      </Box>
+      </Grid>
     </>
   );
 };

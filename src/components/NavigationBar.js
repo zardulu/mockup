@@ -14,7 +14,7 @@ const Navbar = () => {
       sx={{
         backgroundColor: 'black',
         color: 'white',
-        width: '7%',
+        width: {  sm: '10%', md: '8%', lg: '7%', xl: '7%' },
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -22,17 +22,19 @@ const Navbar = () => {
         justifyContent: 'space-between',
         paddingTop: '30px',
         paddingBottom: '30px',
+        position: 'fixed', /* Set the navbar to fixed position */
+        top: 0,
       }}
     >
       
       <Box sx={{display: 'flex', flexDirection: 'column', gap: '20px'}} >
-      <Avatar src= {avatar} alt="Profile Picture" sx={{ width: 80, height: 80 }} />
+      <Avatar src= {avatar} alt="Profile Picture" sx={{ width: { xs: 60, sm: 70, md: 80 }, height: { xs: 60, sm: 70, md: 80 } }} />
         <IconButton sx={{ color: 'white' }}>
           <GridViewIcon />
         </IconButton>
         
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '-270px' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px', flexGrow: 1, justifyContent: 'center' }}>
         <IconButton sx={{ color: 'white' }}>
           <VerifiedIcon />
         </IconButton>
